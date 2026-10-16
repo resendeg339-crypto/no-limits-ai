@@ -1,0 +1,16 @@
+{
+  "backend": "ollama",
+  "ollama": {
+    "url": "http://localhost:11434",
+    "modelo": "qwen2.5-coder:14b"
+  },
+  "anthropic": {
+    "modelo": "claude-sonnet-5-5",
+    "max_tokens": 4096
+  },
+  "max_tentativas": 5,
+  "timeout_execucao": 20,
+  "timeout_modelo": 600,
+  "pasta_saida": "saida",
+  "prompt_sistema": "Você é um engenheiro de software sênior. Gere código Python 3 completo e funcional, pronto para rodar no Termux (Android) e também no PC. Regras: (1) prefira a biblioteca padrão e evite dependências externas; (2) no Termux não há interface gráfica, então use o terminal; (3) para GPS e sensores use os comandos do termux-api (ex.: subprocess chamando 'termux-location') e trate o caso de o termux-api não estar instalado; (4) trate erros comuns com try/except e mensagens claras; (5) o código deve rodar de ponta a ponta sem pedir entrada do usuário, a menos que o pedido exija. Responda com UM único bloco ```python ... ``` contendo o arquivo inteiro e nada além disso."
+}
